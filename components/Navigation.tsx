@@ -35,10 +35,10 @@ export default function Navigation() {
           <Image
             src="/brand/logos/aurixo-logo-primary.svg"
             alt="Aurixo"
-            width={140}
-            height={32}
+            width={210}
+            height={48}
             priority
-            className="h-8 w-auto"
+            className="h-12 w-auto"
           />
         </a>
 

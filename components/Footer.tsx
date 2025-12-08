@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
+// import { motion } from "framer-motion";
+// import { Github, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/5 py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-light mb-4 text-white">AURIXO</h3>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           {/* Social */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-normal mb-4 text-white">Connect</h4>
             <div className="flex gap-4">
               {[
@@ -60,7 +60,7 @@ export default function Footer() {
                 </motion.a>
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}

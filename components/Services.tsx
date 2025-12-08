@@ -67,7 +67,7 @@ export default function Services() {
           <h2 className="text-4xl md:text-6xl font-light mb-6">
             Services & <span className="text-gradient font-normal">Expertise</span>
           </h2>
-          <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-gray dark:text-slate-text max-w-2xl mx-auto leading-relaxed">
             Comprehensive software development services designed to solve real
             business problems and drive measurable outcomes.
           </p>
@@ -83,7 +83,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group relative p-8 bg-carbon rounded-2xl border border-white/5 hover:border-brand-indigo/50 transition-all duration-300"
+              className="group relative p-8 bg-white dark:bg-carbon rounded-2xl border border-cool-gray dark:border-white/5 hover:border-brand-indigo/50 transition-all duration-300 shadow-sm dark:shadow-none"
             >
               {/* Gradient Overlay on Hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-brand-indigo/5 to-brand-magenta/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -95,12 +95,12 @@ export default function Services() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-normal mb-3 text-white">
+                <h3 className="text-xl font-normal mb-3 text-charcoal dark:text-white">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-slate-text leading-relaxed">
+                <p className="text-slate-gray dark:text-slate-text leading-relaxed">
                   {service.description}
                 </p>
               </div>

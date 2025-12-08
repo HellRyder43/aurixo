@@ -47,7 +47,7 @@ export default function ContactCTA() {
             Let's Build Something{" "}
             <span className="text-gradient font-normal">Exceptional</span>
           </h2>
-          <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-gray dark:text-slate-text max-w-2xl mx-auto leading-relaxed">
             Ready to transform your idea into reality? Book a free consultation
             and let's discuss how I can help your business grow.
           </p>
@@ -66,7 +66,7 @@ export default function ContactCTA() {
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-normal mb-2 text-slate-text"
+                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
               >
                 Your Name *
               </label>
@@ -77,7 +77,7 @@ export default function ContactCTA() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-carbon border border-white/10 rounded-lg text-white placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
+                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
                 placeholder="John Doe"
               />
             </div>
@@ -85,7 +85,7 @@ export default function ContactCTA() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-normal mb-2 text-slate-text"
+                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
               >
                 Email Address *
               </label>
@@ -96,7 +96,7 @@ export default function ContactCTA() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-carbon border border-white/10 rounded-lg text-white placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
+                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
                 placeholder="john@company.com"
               />
             </div>
@@ -104,7 +104,7 @@ export default function ContactCTA() {
             <div>
               <label
                 htmlFor="company"
-                className="block text-sm font-normal mb-2 text-slate-text"
+                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
               >
                 Company Name
               </label>
@@ -114,7 +114,7 @@ export default function ContactCTA() {
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className="w-full px-4 py-3 bg-carbon border border-white/10 rounded-lg text-white placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
+                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
                 placeholder="Your Company Ltd."
               />
             </div>
@@ -122,7 +122,7 @@ export default function ContactCTA() {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-normal mb-2 text-slate-text"
+                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
               >
                 Project Details *
               </label>
@@ -133,7 +133,7 @@ export default function ContactCTA() {
                 value={formData.message}
                 onChange={handleChange}
                 rows={5}
-                className="w-full px-4 py-3 bg-carbon border border-white/10 rounded-lg text-white placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all resize-none"
+                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all resize-none"
                 placeholder="Tell me about your project, goals, and timeline..."
               />
             </div>
@@ -159,21 +159,21 @@ export default function ContactCTA() {
           >
             {/* Quick Actions */}
             <div className="space-y-4">
-              <h3 className="text-2xl font-light mb-6 text-white">
+              <h3 className="text-2xl font-light mb-6 text-charcoal dark:text-white">
                 Prefer a Direct Approach?
               </h3>
 
               <motion.a
                 href="mailto:contact@aurixo.com"
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-4 bg-carbon border border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group"
+                className="flex items-center gap-4 p-4 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group shadow-sm dark:shadow-none"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-indigo/20 to-brand-magenta/20 flex items-center justify-center">
                   <Mail className="w-6 h-6 text-brand-indigo" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-text">Email me</div>
-                  <div className="text-white font-normal group-hover:text-brand-indigo transition-colors">
+                  <div className="text-sm text-slate-gray dark:text-slate-text">Email me</div>
+                  <div className="text-charcoal dark:text-white font-normal group-hover:text-brand-indigo transition-colors">
                     contact@aurixo.com
                   </div>
                 </div>
@@ -184,14 +184,14 @@ export default function ContactCTA() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-4 bg-carbon border border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group"
+                className="flex items-center gap-4 p-4 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group shadow-sm dark:shadow-none"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-indigo/20 to-brand-magenta/20 flex items-center justify-center">
                   <Calendar className="w-6 h-6 text-brand-indigo" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-text">Schedule a call</div>
-                  <div className="text-white font-normal group-hover:text-brand-indigo transition-colors">
+                  <div className="text-sm text-slate-gray dark:text-slate-text">Schedule a call</div>
+                  <div className="text-charcoal dark:text-white font-normal group-hover:text-brand-indigo transition-colors">
                     Book a meeting
                   </div>
                 </div>
@@ -200,10 +200,10 @@ export default function ContactCTA() {
 
             {/* Response Time */}
             <div className="p-6 bg-gradient-to-br from-brand-indigo/10 to-brand-magenta/10 border border-brand-indigo/20 rounded-xl">
-              <h4 className="text-lg font-normal mb-2 text-white">
+              <h4 className="text-lg font-normal mb-2 text-charcoal dark:text-white">
                 Quick Response Time
               </h4>
-              <p className="text-sm text-slate-text leading-relaxed">
+              <p className="text-sm text-slate-gray dark:text-slate-text leading-relaxed">
                 I typically respond to all inquiries within 24 hours during
                 business days. For urgent projects, I offer same-day
                 consultations.
@@ -212,10 +212,10 @@ export default function ContactCTA() {
 
             {/* What to Expect */}
             <div>
-              <h4 className="text-lg font-normal mb-4 text-white">
+              <h4 className="text-lg font-normal mb-4 text-charcoal dark:text-white">
                 What Happens Next?
               </h4>
-              <ul className="space-y-3 text-sm text-slate-text">
+              <ul className="space-y-3 text-sm text-slate-gray dark:text-slate-text">
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-indigo/20 flex items-center justify-center text-brand-indigo text-xs font-normal">
                     1

@@ -5,13 +5,13 @@
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/5 py-12 px-6">
+    <footer className="relative border-t border-cool-gray dark:border-white/5 py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-light mb-4 text-white">AURIXO</h3>
-            <p className="text-sm text-slate-text leading-relaxed">
+            <h3 className="text-2xl font-light mb-4 text-charcoal dark:text-white">AURIXO</h3>
+            <p className="text-sm text-slate-gray dark:text-slate-text leading-relaxed">
               Precision engineering for scalable solutions. Building the future,
               one line of code at a time.
             </p>
@@ -19,7 +19,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-normal mb-4 text-white">Quick Links</h4>
+            <h4 className="text-lg font-normal mb-4 text-charcoal dark:text-white">Quick Links</h4>
             <ul className="space-y-2">
               {[
                 { label: "Services", href: "#services" },
@@ -29,7 +29,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-slate-text hover:text-brand-indigo transition-colors"
+                    className="text-sm text-slate-gray dark:text-slate-text hover:text-brand-indigo transition-colors"
                   >
                     {link.label}
                   </a>
@@ -64,20 +64,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-text">
+        <div className="pt-8 border-t border-cool-gray dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-slate-gray dark:text-slate-text">
             &copy; {new Date().getFullYear()} Aurixo. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a
               href="/privacy"
-              className="text-sm text-slate-text hover:text-brand-indigo transition-colors"
+              className="text-sm text-slate-gray dark:text-slate-text hover:text-brand-indigo transition-colors"
             >
               Privacy Policy
             </a>
             <a
               href="/terms"
-              className="text-sm text-slate-text hover:text-brand-indigo transition-colors"
+              className="text-sm text-slate-gray dark:text-slate-text hover:text-brand-indigo transition-colors"
             >
               Terms of Service
             </a>

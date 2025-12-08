@@ -34,7 +34,7 @@ export default function WhyAurixo() {
   return (
     <section className="relative py-32 px-6 overflow-hidden">
       {/* Background Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e1e1e_1px,transparent_1px),linear-gradient(to_bottom,#1e1e1e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
@@ -48,7 +48,7 @@ export default function WhyAurixo() {
           <h2 className="text-4xl md:text-6xl font-light mb-6">
             Why <span className="text-gradient font-normal">Aurixo</span>
           </h2>
-          <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-gray dark:text-slate-text max-w-2xl mx-auto leading-relaxed">
             Trusted by forward-thinking companies to deliver software that
             matters. Here's what sets me apart.
           </p>
@@ -74,10 +74,10 @@ export default function WhyAurixo() {
 
               {/* Content */}
               <div>
-                <h3 className="text-xl font-normal mb-3 text-white">
+                <h3 className="text-xl font-normal mb-3 text-charcoal dark:text-white">
                   {value.title}
                 </h3>
-                <p className="text-slate-text leading-relaxed">
+                <p className="text-slate-gray dark:text-slate-text leading-relaxed">
                   {value.description}
                 </p>
               </div>

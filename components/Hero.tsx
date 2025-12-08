@@ -20,7 +20,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       {/* Animated Background Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#111111_1px,transparent_1px),linear-gradient(to_bottom,#111111_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)]" />
 
       {/* Gradient Orbs */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-brand-indigo/20 rounded-full blur-3xl animate-pulse" />
@@ -35,10 +35,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-carbon border border-white/10 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 mb-8"
         >
           <Sparkles className="w-4 h-4 text-brand-indigo" />
-          <span className="text-sm text-slate-text">
+          <span className="text-sm text-slate-gray dark:text-slate-text">
             Independent Full-Stack Engineer
           </span>
         </motion.div>
@@ -61,7 +61,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-slate-text max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-slate-gray dark:text-slate-text max-w-3xl mx-auto mb-12 leading-relaxed"
         >
           Transform your business with custom software solutions that drive
           growth, streamline operations, and deliver measurable results. From
@@ -89,7 +89,7 @@ export default function Hero() {
             href="#services"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-full bg-carbon border border-brand-indigo/30 text-white font-normal hover:border-brand-indigo transition-all"
+            className="px-8 py-4 rounded-full bg-white dark:bg-carbon border border-brand-indigo/30 text-charcoal dark:text-white font-normal hover:border-brand-indigo transition-all"
           >
             Explore Services
           </motion.a>

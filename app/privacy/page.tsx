@@ -9,20 +9,20 @@ export default function PrivacyPolicy() {
   const lastUpdated = "December 9, 2025";
 
   return (
-    <main className="min-h-screen bg-background pt-24 pb-16 px-6">
+    <main className="min-h-screen bg-[var(--background)] pt-24 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-light text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-light text-[var(--foreground)] mb-4">
             Privacy Policy
           </h1>
-          <p className="text-slate-text">
+          <p className="text-[var(--foreground-secondary)]">
             Last updated: {lastUpdated}
           </p>
         </div>
 
         {/* Content */}
-        <div className="space-y-8 text-slate-text leading-relaxed">
+        <div className="space-y-8 text-[var(--foreground-secondary)] leading-relaxed">
           {/* Introduction */}
           <section>
             <p className="mb-4">
@@ -35,11 +35,11 @@ export default function PrivacyPolicy() {
 
           {/* Information We Collect */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               1. Information We Collect
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Personal Information
             </h3>
             <p className="mb-4">
@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
               <li>Any other information you choose to provide</li>
             </ul>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Automatically Collected Information
             </h3>
             <p className="mb-4">
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
 
           {/* How We Use Information */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               2. How We Use Your Information
             </h2>
             <p className="mb-4">
@@ -99,7 +99,7 @@ export default function PrivacyPolicy() {
 
           {/* Data Sharing */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               3. How We Share Your Information
             </h2>
             <p className="mb-4">
@@ -107,23 +107,23 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-white">Service Providers:</strong> With trusted third-party vendors who assist us in operating our website, conducting business, or servicing you (e.g., hosting providers, payment processors, analytics services)
+                <strong className="text-[var(--foreground)]">Service Providers:</strong> With trusted third-party vendors who assist us in operating our website, conducting business, or servicing you (e.g., hosting providers, payment processors, analytics services)
               </li>
               <li>
-                <strong className="text-white">Legal Requirements:</strong> When required by law, court order, or governmental authority, or to protect our rights, property, or safety
+                <strong className="text-[var(--foreground)]">Legal Requirements:</strong> When required by law, court order, or governmental authority, or to protect our rights, property, or safety
               </li>
               <li>
-                <strong className="text-white">Business Transfers:</strong> In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business
+                <strong className="text-[var(--foreground)]">Business Transfers:</strong> In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business
               </li>
               <li>
-                <strong className="text-white">With Your Consent:</strong> With your explicit consent for any other purpose
+                <strong className="text-[var(--foreground)]">With Your Consent:</strong> With your explicit consent for any other purpose
               </li>
             </ul>
           </section>
 
           {/* Data Security */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               4. Data Security
             </h2>
             <p className="mb-4">
@@ -142,7 +142,7 @@ export default function PrivacyPolicy() {
 
           {/* Cookies and Tracking */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               5. Cookies and Tracking Technologies
             </h2>
             <p className="mb-4">
@@ -152,7 +152,7 @@ export default function PrivacyPolicy() {
 
           {/* Data Retention */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               6. Data Retention
             </h2>
             <p>
@@ -162,7 +162,7 @@ export default function PrivacyPolicy() {
 
           {/* Your Rights */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               7. Your Privacy Rights
             </h2>
             <p className="mb-4">
@@ -170,25 +170,25 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-white">Access:</strong> Request access to the personal information we hold about you
+                <strong className="text-[var(--foreground)]">Access:</strong> Request access to the personal information we hold about you
               </li>
               <li>
-                <strong className="text-white">Correction:</strong> Request correction of inaccurate or incomplete information
+                <strong className="text-[var(--foreground)]">Correction:</strong> Request correction of inaccurate or incomplete information
               </li>
               <li>
-                <strong className="text-white">Deletion:</strong> Request deletion of your personal information
+                <strong className="text-[var(--foreground)]">Deletion:</strong> Request deletion of your personal information
               </li>
               <li>
-                <strong className="text-white">Portability:</strong> Request a copy of your data in a structured, machine-readable format
+                <strong className="text-[var(--foreground)]">Portability:</strong> Request a copy of your data in a structured, machine-readable format
               </li>
               <li>
-                <strong className="text-white">Objection:</strong> Object to our processing of your personal information
+                <strong className="text-[var(--foreground)]">Objection:</strong> Object to our processing of your personal information
               </li>
               <li>
-                <strong className="text-white">Restriction:</strong> Request restriction of processing your information
+                <strong className="text-[var(--foreground)]">Restriction:</strong> Request restriction of processing your information
               </li>
               <li>
-                <strong className="text-white">Withdraw Consent:</strong> Withdraw previously given consent at any time
+                <strong className="text-[var(--foreground)]">Withdraw Consent:</strong> Withdraw previously given consent at any time
               </li>
             </ul>
             <p className="mt-4">
@@ -198,7 +198,7 @@ export default function PrivacyPolicy() {
 
           {/* Third-Party Links */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               8. Third-Party Websites
             </h2>
             <p>
@@ -208,7 +208,7 @@ export default function PrivacyPolicy() {
 
           {/* International Transfers */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               9. International Data Transfers
             </h2>
             <p>
@@ -218,7 +218,7 @@ export default function PrivacyPolicy() {
 
           {/* Children's Privacy */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               10. Children&apos;s Privacy
             </h2>
             <p>
@@ -228,7 +228,7 @@ export default function PrivacyPolicy() {
 
           {/* Updates */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               11. Changes to This Privacy Policy
             </h2>
             <p>
@@ -238,14 +238,14 @@ export default function PrivacyPolicy() {
 
           {/* Contact */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               12. Contact Us
             </h2>
             <p className="mb-4">
               If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
             </p>
-            <div className="bg-carbon border border-white/10 rounded-lg p-6">
-              <p className="text-white font-normal mb-2">Aurixo</p>
+            <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-6">
+              <p className="text-[var(--foreground)] font-normal mb-2">Aurixo</p>
               <p>Email: privacy@aurixo.com</p>
               <p className="mt-4 text-sm">
                 We will respond to your inquiry within 30 days.
@@ -254,19 +254,19 @@ export default function PrivacyPolicy() {
           </section>
 
           {/* GDPR/CCPA Compliance */}
-          <section className="border-t border-white/10 pt-8">
-            <h2 className="text-2xl font-normal text-white mb-4">
+          <section className="border-t border-[var(--border)] pt-8">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               Compliance Notices
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3">
               GDPR (EU Users)
             </h3>
             <p className="mb-4">
               If you are located in the European Economic Area (EEA), we process your personal data based on legitimate interests, contractual necessity, or your consent. You have additional rights under GDPR, including the right to lodge a complaint with a supervisory authority.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3">
               CCPA (California Users)
             </h3>
             <p>
@@ -276,7 +276,7 @@ export default function PrivacyPolicy() {
         </div>
 
         {/* Back to Home Link */}
-        <div className="mt-12 pt-8 border-t border-white/10">
+        <div className="mt-12 pt-8 border-t border-[var(--border)]">
           <a
             href="/"
             className="inline-flex items-center text-brand-indigo hover:text-brand-purple transition-colors"

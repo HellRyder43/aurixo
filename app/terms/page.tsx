@@ -9,20 +9,20 @@ export default function TermsOfService() {
   const lastUpdated = "December 9, 2025";
 
   return (
-    <main className="min-h-screen bg-background pt-24 pb-16 px-6">
+    <main className="min-h-screen bg-[var(--background)] pt-24 pb-16 px-6">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-light text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-light text-[var(--foreground)] mb-4">
             Terms of Service
           </h1>
-          <p className="text-slate-text">
+          <p className="text-[var(--foreground-secondary)]">
             Last updated: {lastUpdated}
           </p>
         </div>
 
         {/* Content */}
-        <div className="space-y-8 text-slate-text leading-relaxed">
+        <div className="space-y-8 text-[var(--foreground-secondary)] leading-relaxed">
           {/* Introduction */}
           <section>
             <p className="mb-4">
@@ -35,31 +35,31 @@ export default function TermsOfService() {
 
           {/* Definitions */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               1. Definitions
             </h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-white">&quot;Services&quot;</strong> refers to all software development, consulting, and related services provided by Aurixo
+                <strong className="text-[var(--foreground)]">&quot;Services&quot;</strong> refers to all software development, consulting, and related services provided by Aurixo
               </li>
               <li>
-                <strong className="text-white">&quot;Client&quot;</strong> or <strong className="text-white">&quot;you&quot;</strong> refers to the individual or entity engaging our services
+                <strong className="text-[var(--foreground)]">&quot;Client&quot;</strong> or <strong className="text-[var(--foreground)]">&quot;you&quot;</strong> refers to the individual or entity engaging our services
               </li>
               <li>
-                <strong className="text-white">&quot;Project&quot;</strong> refers to the specific work scope defined in a Statement of Work or Project Agreement
+                <strong className="text-[var(--foreground)]">&quot;Project&quot;</strong> refers to the specific work scope defined in a Statement of Work or Project Agreement
               </li>
               <li>
-                <strong className="text-white">&quot;Deliverables&quot;</strong> refers to the work product, code, documentation, or other materials produced as part of a Project
+                <strong className="text-[var(--foreground)]">&quot;Deliverables&quot;</strong> refers to the work product, code, documentation, or other materials produced as part of a Project
               </li>
               <li>
-                <strong className="text-white">&quot;Agreement&quot;</strong> refers to these Terms together with any Statement of Work, Project Agreement, or other written agreement between you and Aurixo
+                <strong className="text-[var(--foreground)]">&quot;Agreement&quot;</strong> refers to these Terms together with any Statement of Work, Project Agreement, or other written agreement between you and Aurixo
               </li>
             </ul>
           </section>
 
           {/* Services */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               2. Services Description
             </h2>
             <p className="mb-4">
@@ -81,18 +81,18 @@ export default function TermsOfService() {
 
           {/* Engagement Process */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               3. Engagement Process
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Consultation
             </h3>
             <p className="mb-4">
               Prospective clients may request a consultation to discuss project requirements. Initial consultations are provided at no charge and do not create any obligation on either party.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Project Agreement
             </h3>
             <p className="mb-4">
@@ -109,11 +109,11 @@ export default function TermsOfService() {
 
           {/* Payment Terms */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               4. Payment Terms
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Fees and Billing
             </h3>
             <p className="mb-4">
@@ -121,20 +121,20 @@ export default function TermsOfService() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-white">Fixed Price:</strong> A predetermined total fee for the entire project
+                <strong className="text-[var(--foreground)]">Fixed Price:</strong> A predetermined total fee for the entire project
               </li>
               <li>
-                <strong className="text-white">Hourly Rate:</strong> Payment based on actual hours worked
+                <strong className="text-[var(--foreground)]">Hourly Rate:</strong> Payment based on actual hours worked
               </li>
               <li>
-                <strong className="text-white">Milestone-Based:</strong> Payments tied to completion of specific project phases
+                <strong className="text-[var(--foreground)]">Milestone-Based:</strong> Payments tied to completion of specific project phases
               </li>
               <li>
-                <strong className="text-white">Retainer:</strong> Ongoing monthly fee for continued services
+                <strong className="text-[var(--foreground)]">Retainer:</strong> Ongoing monthly fee for continued services
               </li>
             </ul>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Payment Schedule
             </h3>
             <p className="mb-4">
@@ -147,7 +147,7 @@ export default function TermsOfService() {
               <li>Net 14 days for invoiced amounts</li>
             </ul>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Late Payments
             </h3>
             <p>
@@ -157,18 +157,18 @@ export default function TermsOfService() {
 
           {/* Intellectual Property */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               5. Intellectual Property Rights
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Client-Owned IP
             </h3>
             <p className="mb-4">
               Upon full payment of all fees, you will own the intellectual property rights to custom code and deliverables specifically created for your project, subject to the exclusions below.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Aurixo-Owned IP
             </h3>
             <p className="mb-4">
@@ -180,14 +180,14 @@ export default function TermsOfService() {
               <li>Any code or materials created outside the scope of your project</li>
             </ul>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Third-Party Components
             </h3>
             <p className="mb-4">
               Projects may incorporate third-party open-source libraries and frameworks, which remain subject to their respective licenses. We will disclose all significant third-party dependencies.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Portfolio Rights
             </h3>
             <p>
@@ -197,7 +197,7 @@ export default function TermsOfService() {
 
           {/* Confidentiality */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               6. Confidentiality
             </h2>
             <p className="mb-4">
@@ -216,7 +216,7 @@ export default function TermsOfService() {
 
           {/* Client Responsibilities */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               7. Client Responsibilities
             </h2>
             <p className="mb-4">
@@ -237,11 +237,11 @@ export default function TermsOfService() {
 
           {/* Warranties and Disclaimer */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               8. Warranties and Disclaimer
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Our Warranties
             </h3>
             <p className="mb-4">
@@ -254,14 +254,14 @@ export default function TermsOfService() {
               <li>We will comply with applicable laws and regulations</li>
             </ul>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Warranty Period
             </h3>
             <p className="mb-4">
               Unless otherwise agreed, we provide a 30-day warranty period from project delivery. During this period, we will fix bugs or defects in deliverables at no additional charge.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Disclaimer
             </h3>
             <p className="mb-4">
@@ -274,7 +274,7 @@ export default function TermsOfService() {
 
           {/* Limitation of Liability */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               9. Limitation of Liability
             </h2>
             <p className="mb-4">
@@ -282,13 +282,13 @@ export default function TermsOfService() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong className="text-white">Total Liability:</strong> Our total liability for any claims arising from or related to our services shall not exceed the total fees paid by you for the specific project giving rise to the claim
+                <strong className="text-[var(--foreground)]">Total Liability:</strong> Our total liability for any claims arising from or related to our services shall not exceed the total fees paid by you for the specific project giving rise to the claim
               </li>
               <li>
-                <strong className="text-white">Excluded Damages:</strong> We shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including lost profits, lost data, or business interruption
+                <strong className="text-[var(--foreground)]">Excluded Damages:</strong> We shall not be liable for any indirect, incidental, consequential, special, or punitive damages, including lost profits, lost data, or business interruption
               </li>
               <li>
-                <strong className="text-white">Time Limit:</strong> No action may be brought against us more than one (1) year after the cause of action arises
+                <strong className="text-[var(--foreground)]">Time Limit:</strong> No action may be brought against us more than one (1) year after the cause of action arises
               </li>
             </ul>
             <p className="mt-4">
@@ -298,7 +298,7 @@ export default function TermsOfService() {
 
           {/* Indemnification */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               10. Indemnification
             </h2>
             <p className="mb-4">
@@ -315,11 +315,11 @@ export default function TermsOfService() {
 
           {/* Termination */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               11. Termination
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Termination by Client
             </h3>
             <p className="mb-4">
@@ -331,7 +331,7 @@ export default function TermsOfService() {
               <li>A cancellation fee (if specified in the Project Agreement)</li>
             </ul>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Termination by Aurixo
             </h3>
             <p className="mb-4">
@@ -344,7 +344,7 @@ export default function TermsOfService() {
               <li>Continuation would violate applicable laws</li>
             </ul>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Effect of Termination
             </h3>
             <p>
@@ -354,7 +354,7 @@ export default function TermsOfService() {
 
           {/* Scope Changes */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               12. Changes to Project Scope
             </h2>
             <p className="mb-4">
@@ -372,7 +372,7 @@ export default function TermsOfService() {
 
           {/* Force Majeure */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               13. Force Majeure
             </h2>
             <p>
@@ -382,7 +382,7 @@ export default function TermsOfService() {
 
           {/* Independent Contractor */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               14. Independent Contractor Relationship
             </h2>
             <p>
@@ -392,14 +392,14 @@ export default function TermsOfService() {
 
           {/* Communication */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               15. Communications and Notices
             </h2>
             <p className="mb-4">
               Official notices must be sent in writing to:
             </p>
-            <div className="bg-carbon border border-white/10 rounded-lg p-6">
-              <p className="text-white font-normal mb-2">Aurixo</p>
+            <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-6">
+              <p className="text-[var(--foreground)] font-normal mb-2">Aurixo</p>
               <p>Email: legal@aurixo.com</p>
             </div>
             <p className="mt-4">
@@ -409,25 +409,25 @@ export default function TermsOfService() {
 
           {/* Dispute Resolution */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               16. Dispute Resolution
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Good Faith Negotiation
             </h3>
             <p className="mb-4">
               In the event of any dispute, both parties agree to first attempt to resolve the matter through good faith negotiation.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Mediation
             </h3>
             <p className="mb-4">
               If negotiation fails, parties agree to attempt mediation before pursuing legal action.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Governing Law
             </h3>
             <p>
@@ -437,46 +437,46 @@ export default function TermsOfService() {
 
           {/* General Provisions */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               17. General Provisions
             </h2>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Entire Agreement
             </h3>
             <p className="mb-4">
               These Terms, together with any Project Agreement or Statement of Work, constitute the entire agreement between the parties and supersede all prior agreements or understandings.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Amendments
             </h3>
             <p className="mb-4">
               We may modify these Terms at any time. Material changes will be communicated with reasonable notice. Continued use of our services constitutes acceptance of modified Terms.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Assignment
             </h3>
             <p className="mb-4">
               You may not assign or transfer these Terms or any Project Agreement without our prior written consent. We may assign our rights and obligations with notice to you.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Severability
             </h3>
             <p className="mb-4">
               If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Waiver
             </h3>
             <p className="mb-4">
               No waiver of any term shall be deemed a further or continuing waiver of that term or any other term.
             </p>
 
-            <h3 className="text-xl font-normal text-white mb-3 mt-6">
+            <h3 className="text-xl font-normal text-[var(--foreground)] mb-3 mt-6">
               Headings
             </h3>
             <p>
@@ -486,7 +486,7 @@ export default function TermsOfService() {
 
           {/* Acceptance */}
           <section>
-            <h2 className="text-2xl font-normal text-white mb-4">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               18. Acceptance
             </h2>
             <p>
@@ -495,15 +495,15 @@ export default function TermsOfService() {
           </section>
 
           {/* Contact */}
-          <section className="border-t border-white/10 pt-8">
-            <h2 className="text-2xl font-normal text-white mb-4">
+          <section className="border-t border-[var(--border)] pt-8">
+            <h2 className="text-2xl font-normal text-[var(--foreground)] mb-4">
               Contact Information
             </h2>
             <p className="mb-4">
               If you have any questions about these Terms of Service, please contact us:
             </p>
-            <div className="bg-carbon border border-white/10 rounded-lg p-6">
-              <p className="text-white font-normal mb-2">Aurixo</p>
+            <div className="bg-[var(--card)] border border-[var(--border)] rounded-lg p-6">
+              <p className="text-[var(--foreground)] font-normal mb-2">Aurixo</p>
               <p>Email: legal@aurixo.com</p>
               <p className="mt-4 text-sm">
                 For general inquiries: hello@aurixo.com
@@ -513,7 +513,7 @@ export default function TermsOfService() {
         </div>
 
         {/* Back to Home Link */}
-        <div className="mt-12 pt-8 border-t border-white/10">
+        <div className="mt-12 pt-8 border-t border-[var(--border)]">
           <a
             href="/"
             className="inline-flex items-center text-brand-indigo hover:text-brand-purple transition-colors"

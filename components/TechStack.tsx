@@ -44,7 +44,7 @@ export default function TechStack() {
           <h2 className="text-4xl md:text-6xl font-light mb-6">
             Trusted <span className="text-gradient font-normal">Technologies</span>
           </h2>
-          <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-gray dark:text-slate-text max-w-2xl mx-auto leading-relaxed">
             Industry-leading tools and frameworks to build reliable, performant,
             and future-proof solutions.
           </p>
@@ -59,7 +59,7 @@ export default function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="p-6 bg-carbon rounded-xl border border-white/5"
+              className="p-6 bg-white dark:bg-carbon rounded-xl border border-cool-gray dark:border-white/5 shadow-sm dark:shadow-none"
             >
               <h3 className="text-lg font-normal mb-4 text-brand-indigo">
                 {tech.category}
@@ -68,7 +68,7 @@ export default function TechStack() {
                 {tech.tools.map((tool) => (
                   <span
                     key={tool}
-                    className="px-3 py-1.5 text-sm bg-deep-black border border-white/10 rounded-lg text-slate-text hover:border-brand-indigo/30 hover:text-white transition-all"
+                    className="px-3 py-1.5 text-sm bg-porcelain dark:bg-deep-black border border-cool-gray dark:border-white/10 rounded-lg text-slate-gray dark:text-slate-text hover:border-brand-indigo/30 hover:text-charcoal dark:hover:text-white transition-all"
                   >
                     {tool}
                   </span>
@@ -110,10 +110,10 @@ export default function TechStack() {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               className="text-center p-6"
             >
-              <h4 className="text-xl font-normal mb-2 text-white">
+              <h4 className="text-xl font-normal mb-2 text-charcoal dark:text-white">
                 {item.title}
               </h4>
-              <p className="text-sm text-slate-text">{item.description}</p>
+              <p className="text-sm text-slate-gray dark:text-slate-text">{item.description}</p>
             </motion.div>
           ))}
         </motion.div>

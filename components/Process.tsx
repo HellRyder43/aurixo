@@ -73,7 +73,7 @@ export default function Process() {
           <h2 className="text-4xl md:text-6xl font-light mb-6">
             How I <span className="text-gradient font-normal">Work</span>
           </h2>
-          <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-gray dark:text-slate-text max-w-2xl mx-auto leading-relaxed">
             A proven process refined over years of delivering successful
             projects. Transparent, collaborative, and results-driven.
           </p>
@@ -102,13 +102,13 @@ export default function Process() {
                     index % 2 === 0 ? "md:text-right" : "md:text-left"
                   }`}
                 >
-                  <h3 className="text-2xl md:text-3xl font-light mb-4 text-white">
+                  <h3 className="text-2xl md:text-3xl font-light mb-4 text-charcoal dark:text-white">
                     <span className="text-gradient font-normal">
                       {String(index + 1).padStart(2, "0")}.
                     </span>{" "}
                     {step.title}
                   </h3>
-                  <p className="text-slate-text leading-relaxed max-w-md">
+                  <p className="text-slate-gray dark:text-slate-text leading-relaxed max-w-md">
                     {step.description}
                   </p>
                 </div>

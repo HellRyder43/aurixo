@@ -1,0 +1,35 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Aurixo - Precision Engineering for Scalable Solutions",
+  description: "Full-stack software development agency specializing in web applications, mobile apps, AI solutions, and scalable backend systems.",
+  keywords: ["software development", "full-stack", "web applications", "mobile apps", "AI solutions", "backend development"],
+  icons: {
+    icon: [
+      { url: "/brand/favicons/favicon.ico" },
+      { url: "/brand/favicons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/brand/favicons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/brand/favicons/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+    ],
+    apple: [
+      { url: "/brand/favicons/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
+  themeColor: "#6366f1",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className="antialiased">
+        {children}
+      </body>
+    </html>
+  );
+}

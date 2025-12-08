@@ -7,6 +7,14 @@
 # Testing
 /coverage
 
+# Playwright
+/test-results/
+/playwright-report/
+/.playwright-mcp/
+**/*.spec.ts-snapshots/
+**/page-*.png
+**/page-*.jpeg
+
 # Next.js
 /.next/
 /out/

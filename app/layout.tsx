@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Aurixo - Precision Engineering for Scalable Solutions",
-  description: "Full-stack software development agency specializing in web applications, mobile apps, AI solutions, and scalable backend systems.",
+  description: "Independent full-stack software engineer specializing in web applications, mobile apps, AI solutions, and scalable backend systems.",
   keywords: ["software development", "full-stack", "web applications", "mobile apps", "AI solutions", "backend development"],
   icons: {
     icon: [

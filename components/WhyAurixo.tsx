@@ -8,7 +8,7 @@ const values = [
     icon: Target,
     title: "Business-Focused Approach",
     description:
-      "We prioritize outcomes over output. Every technical decision is aligned with your business goals and ROI.",
+      "Prioritizing outcomes over output. Every technical decision is aligned with your business goals and ROI.",
   },
   {
     icon: Layers,
@@ -50,7 +50,7 @@ export default function WhyAurixo() {
           </h2>
           <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
             Trusted by forward-thinking companies to deliver software that
-            matters. Here's what sets us apart.
+            matters. Here's what sets me apart.
           </p>
         </motion.div>
 

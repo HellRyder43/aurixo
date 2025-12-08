@@ -9,7 +9,7 @@ const steps = [
     icon: Search,
     title: "Discovery",
     description:
-      "Deep dive into your business needs, goals, and technical requirements. We define success metrics and project scope.",
+      "Deep dive into your business needs, goals, and technical requirements. Defining success metrics and project scope together.",
   },
   {
     icon: Pencil,
@@ -33,7 +33,7 @@ const steps = [
     icon: Headphones,
     title: "Support",
     description:
-      "Ongoing maintenance, updates, and scaling support. We're your long-term technology partner, not just a vendor.",
+      "Ongoing maintenance, updates, and scaling support. Your long-term technology partner, not just a vendor.",
   },
 ];
 
@@ -71,7 +71,7 @@ export default function Process() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-6xl font-light mb-6">
-            How We <span className="text-gradient font-normal">Work</span>
+            How I <span className="text-gradient font-normal">Work</span>
           </h2>
           <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
             A proven process refined over years of delivering successful

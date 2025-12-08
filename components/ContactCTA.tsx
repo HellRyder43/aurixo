@@ -16,7 +16,7 @@ export default function ContactCTA() {
     e.preventDefault();
     // Form submission logic would go here
     console.log("Form submitted:", formData);
-    alert("Thank you! We'll get back to you within 24 hours.");
+    alert("Thank you! I'll get back to you within 24 hours.");
     setFormData({ name: "", email: "", company: "", message: "" });
   };
 
@@ -49,7 +49,7 @@ export default function ContactCTA() {
           </h2>
           <p className="text-lg text-slate-text max-w-2xl mx-auto leading-relaxed">
             Ready to transform your idea into reality? Book a free consultation
-            and let's discuss how we can help your business grow.
+            and let's discuss how I can help your business grow.
           </p>
         </motion.div>
 
@@ -134,7 +134,7 @@ export default function ContactCTA() {
                 onChange={handleChange}
                 rows={5}
                 className="w-full px-4 py-3 bg-carbon border border-white/10 rounded-lg text-white placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all resize-none"
-                placeholder="Tell us about your project, goals, and timeline..."
+                placeholder="Tell me about your project, goals, and timeline..."
               />
             </div>
 
@@ -164,7 +164,7 @@ export default function ContactCTA() {
               </h3>
 
               <motion.a
-                href="mailto:hello@aurixo.com"
+                href="mailto:contact@aurixo.com"
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 p-4 bg-carbon border border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group"
               >
@@ -172,9 +172,9 @@ export default function ContactCTA() {
                   <Mail className="w-6 h-6 text-brand-indigo" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-text">Email us</div>
+                  <div className="text-sm text-slate-text">Email me</div>
                   <div className="text-white font-normal group-hover:text-brand-indigo transition-colors">
-                    hello@aurixo.com
+                    contact@aurixo.com
                   </div>
                 </div>
               </motion.a>
@@ -204,8 +204,8 @@ export default function ContactCTA() {
                 Quick Response Time
               </h4>
               <p className="text-sm text-slate-text leading-relaxed">
-                We typically respond to all inquiries within 24 hours during
-                business days. For urgent projects, we offer same-day
+                I typically respond to all inquiries within 24 hours during
+                business days. For urgent projects, I offer same-day
                 consultations.
               </p>
             </div>
@@ -220,7 +220,7 @@ export default function ContactCTA() {
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-indigo/20 flex items-center justify-center text-brand-indigo text-xs font-normal">
                     1
                   </span>
-                  <span>We'll review your project details</span>
+                  <span>I'll review your project details</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-indigo/20 flex items-center justify-center text-brand-indigo text-xs font-normal">

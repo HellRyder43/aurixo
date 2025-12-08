@@ -39,7 +39,7 @@ export default function Hero() {
         >
           <Sparkles className="w-4 h-4 text-brand-indigo" />
           <span className="text-sm text-slate-text">
-            Full-Stack Development Agency
+            Independent Full-Stack Engineer
           </span>
         </motion.div>
 
@@ -65,7 +65,7 @@ export default function Hero() {
         >
           Transform your business with custom software solutions that drive
           growth, streamline operations, and deliver measurable results. From
-          concept to deployment, we build systems that scale.
+          concept to deployment, building systems that scale.
         </motion.p>
 
         {/* CTAs */}

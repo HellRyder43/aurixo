@@ -8,14 +8,32 @@ import {
   Workflow,
   Brain,
   Database,
+  Sparkles,
+  LucideIcon,
 } from "lucide-react";
 
-const services = [
+interface Service {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  badge?: string;
+  badgeColor?: string;
+}
+
+const services: Service[] = [
   {
     icon: Globe,
     title: "Web Applications",
     description:
       "Custom web platforms built with modern frameworks. Responsive, fast, and tailored to your business needs.",
+  },
+  {
+    icon: Brain,
+    title: "AI & Agentic Solutions",
+    description:
+      "Leverage cutting-edge AI and intelligent agents to enhance decision-making and automate complex tasks.",
+    badge: "Trending",
+    badgeColor: "bg-gradient-to-r from-amber-500 to-orange-500",
   },
   {
     icon: Smartphone,
@@ -34,12 +52,6 @@ const services = [
     title: "Automation & Integrations",
     description:
       "Connect your systems, automate workflows, and eliminate manual processes to boost operational efficiency.",
-  },
-  {
-    icon: Brain,
-    title: "AI & Agentic Solutions",
-    description:
-      "Leverage cutting-edge AI and intelligent agents to enhance decision-making and automate complex tasks.",
   },
   {
     icon: Database,
@@ -89,6 +101,24 @@ export default function Services() {
               <div className="absolute inset-0 bg-gradient-to-br from-brand-indigo/5 to-brand-magenta/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="relative z-10">
+                {/* Badge (if present) */}
+                {service.badge && (
+                  <motion.div
+                    initial={{ scale: 0, rotate: -10 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+                    className="absolute -top-3 -right-3 z-20"
+                  >
+                    <div className={`${service.badgeColor} px-3 py-1 rounded-full flex items-center gap-1 shadow-lg`}>
+                      <Sparkles className="w-3 h-3 text-white" />
+                      <span className="text-xs font-medium text-white uppercase tracking-wide">
+                        {service.badge}
+                      </span>
+                    </div>
+                  </motion.div>
+                )}
+
                 {/* Icon */}
                 <div className="w-14 h-14 rounded-xl bg-gradient-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-7 h-7 text-white" />

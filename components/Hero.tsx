@@ -18,8 +18,96 @@ export default function Hero() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32"
     >
-      {/* Animated Background Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)]" />
+      {/* 3D Wireframe Mesh Background */}
+      <motion.div
+        className="absolute inset-0 overflow-hidden opacity-30"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.3 }}
+        transition={{ duration: 2 }}
+      >
+        <motion.svg
+          className="absolute inset-0 w-full h-full"
+          viewBox="0 0 1000 1000"
+          initial={{ rotateX: 60, rotateY: 0 }}
+          animate={{
+            rotateX: [60, 65, 60],
+            rotateY: [0, 5, 0],
+            scale: [1, 1.05, 1]
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          style={{
+            transformStyle: "preserve-3d",
+            perspective: "1000px",
+          }}
+        >
+          <defs>
+            <linearGradient id="wireframeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#6366f1" stopOpacity="0.6" />
+              <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#d946ef" stopOpacity="0.3" />
+            </linearGradient>
+          </defs>
+
+          {/* Horizontal Grid Lines */}
+          {Array.from({ length: 20 }).map((_, i) => (
+            <motion.line
+              key={`h-${i}`}
+              x1="0"
+              y1={i * 50}
+              x2="1000"
+              y2={i * 50}
+              stroke="url(#wireframeGradient)"
+              strokeWidth="1"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: i * 0.05 }}
+            />
+          ))}
+
+          {/* Vertical Grid Lines */}
+          {Array.from({ length: 20 }).map((_, i) => (
+            <motion.line
+              key={`v-${i}`}
+              x1={i * 50}
+              y1="0"
+              x2={i * 50}
+              y2="1000"
+              stroke="url(#wireframeGradient)"
+              strokeWidth="1"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 1 }}
+              transition={{ duration: 2, delay: i * 0.05 }}
+            />
+          ))}
+
+          {/* Diagonal Accent Lines for 3D Effect */}
+          <motion.line
+            x1="0" y1="0" x2="1000" y2="1000"
+            stroke="url(#wireframeGradient)"
+            strokeWidth="2"
+            strokeDasharray="10,10"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 3, delay: 1 }}
+          />
+          <motion.line
+            x1="1000" y1="0" x2="0" y2="1000"
+            stroke="url(#wireframeGradient)"
+            strokeWidth="2"
+            strokeDasharray="10,10"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 3, delay: 1.2 }}
+          />
+        </motion.svg>
+      </motion.div>
+
+      {/* Animated Background Grid (Static Grid for Texture) */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)] opacity-30" />
 
       {/* Gradient Orbs */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-brand-indigo/20 rounded-full blur-3xl animate-pulse" />

@@ -11,13 +11,12 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32"
     >
       {/* Animated Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--grid-line)_1px,transparent_1px),linear-gradient(to_bottom,var(--grid-line)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)]" />
@@ -27,15 +26,15 @@ export default function Hero() {
       <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-brand-magenta/20 rounded-full blur-3xl animate-pulse delay-700" />
 
       <motion.div
-        style={{ y, opacity }}
-        className="relative z-10 max-w-5xl mx-auto px-6 text-center"
+        style={{ y }}
+        className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8"
       >
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-carbon border border-cool-gray dark:border-white/10"
         >
           <Sparkles className="w-4 h-4 text-brand-indigo" />
           <span className="text-sm text-slate-gray dark:text-slate-text">
@@ -48,11 +47,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-6"
+          className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight"
         >
-          Precision Engineering for{" "}
+          Build Systems That Scale,{" "}
           <span className="text-gradient font-normal">
-            Scalable Solutions
+            So You Can Grow
           </span>
         </motion.h1>
 
@@ -61,7 +60,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-slate-gray dark:text-slate-text max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-lg md:text-xl text-slate-gray dark:text-slate-text max-w-3xl mx-auto leading-relaxed"
         >
           Transform your business with custom software solutions that drive
           growth, streamline operations, and deliver measurable results. From
@@ -73,13 +72,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 pb-24"
         >
           <motion.a
             href="#contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group px-8 py-4 rounded-full bg-gradient-brand text-white font-normal flex items-center gap-2 transition-all hover:shadow-xl hover:shadow-brand-purple/30"
+            className="relative z-20 group px-8 py-4 rounded-full bg-gradient-brand text-white font-normal flex items-center gap-2 transition-all hover:shadow-xl hover:shadow-brand-purple/30"
           >
             Book Free Consultation
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -89,7 +88,7 @@ export default function Hero() {
             href="#services"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-full bg-white dark:bg-carbon border border-brand-indigo/30 text-charcoal dark:text-white font-normal hover:border-brand-indigo transition-all"
+            className="relative z-20 px-8 py-4 rounded-full bg-white dark:bg-carbon border border-brand-indigo/30 text-charcoal dark:text-white font-normal hover:border-brand-indigo transition-all"
           >
             Explore Services
           </motion.a>

@@ -14,7 +14,7 @@ const values = [
     icon: Layers,
     title: "Clean Architecture",
     description:
-      "Maintainable, well-documented codebases built with industry best practices. Easy to scale, extend, and hand off.",
+      "Maintainable, well-documented codebases that reduce future development costs by up to 40%. Built with industry best practices—easy to scale, extend, and hand off to any team.",
   },
   {
     icon: Zap,

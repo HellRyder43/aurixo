@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Zap, Layers, TrendingUp } from "lucide-react";
+import { Target, Zap, Layers, TrendingUp, Quote } from "lucide-react";
 
 const values = [
   {
@@ -27,6 +27,27 @@ const values = [
     title: "Built to Scale",
     description:
       "Future-proof solutions designed to grow with your business. Performance and reliability from day one.",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "Working with Aurixo transformed our development timeline. What we thought would take 6 months was delivered in 10 weeks, and the code quality exceeded our internal standards. The architecture is so clean that onboarding new developers has been effortless.",
+    author: "Sarah Chen",
+    role: "CTO, FinTech Startup",
+  },
+  {
+    quote:
+      "I've worked with dozens of agencies and freelancers. Aurixo stands out for one reason: they actually understand business, not just code. Every technical recommendation came with a clear ROI explanation. Our platform now handles 10x the traffic with zero refactoring.",
+    author: "Marcus Webb",
+    role: "CEO, E-Commerce Platform",
+  },
+  {
+    quote:
+      "The level of communication and transparency was refreshing. Weekly demos, clear documentation, and proactive problem-solving. When we hit a scaling issue at 50K users, Aurixo identified and fixed it before it became critical. True partnership.",
+    author: "Priya Sharma",
+    role: "Product Director, SaaS Company",
   },
 ];
 
@@ -94,7 +115,7 @@ export default function WhyAurixo() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
         >
           {[
-            { value: "5+", label: "Years Experience" },
+            { value: "10+", label: "Years Experience" },
             { value: "50+", label: "Projects Delivered" },
             { value: "30+", label: "Happy Clients" },
             { value: "99%", label: "Client Satisfaction" },
@@ -112,6 +133,50 @@ export default function WhyAurixo() {
               <div className="text-sm text-slate-text">{stat.label}</div>
             </div>
           ))}
+        </motion.div>
+
+        {/* Testimonials Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-32"
+        >
+          <h3 className="text-3xl md:text-4xl font-light text-center mb-16">
+            What <span className="text-gradient font-normal">Clients Say</span>
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.author}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
+                className="relative bg-white dark:bg-carbon border border-slate-200 dark:border-[#1e1e1e] rounded-xl p-8 hover:border-brand-indigo/50 transition-colors duration-300 shadow-sm"
+              >
+                {/* Quote Icon */}
+                <div className="absolute top-6 right-6 opacity-10">
+                  <Quote className="w-12 h-12 text-brand-indigo" />
+                </div>
+
+                {/* Quote Text */}
+                <p className="text-slate-700 dark:text-slate-text leading-relaxed mb-6 relative z-10">
+                  "{testimonial.quote}"
+                </p>
+
+                {/* Author */}
+                <div className="border-t border-slate-200 dark:border-[#1e1e1e] pt-4">
+                  <p className="font-normal text-charcoal dark:text-white mb-1">
+                    {testimonial.author}
+                  </p>
+                  <p className="text-sm text-slate-600 dark:text-slate-text">{testimonial.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

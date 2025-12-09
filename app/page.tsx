@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import FeaturedWork from "@/components/FeaturedWork";
 import WhyAurixo from "@/components/WhyAurixo";
 import Process from "@/components/Process";
 import TechStack from "@/components/TechStack";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Services />
+      <FeaturedWork />
       <WhyAurixo />
       <Process />
       <TechStack />

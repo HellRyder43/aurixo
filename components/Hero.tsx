@@ -13,6 +13,13 @@ export default function Hero() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
+  // WhatsApp configuration
+  const whatsappNumber = "60102651179";
+  const defaultMessage = encodeURIComponent(
+    "Hi! I'm interested in discussing a project with Aurixo."
+  );
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
+
   return (
     <section
       ref={containerRef}
@@ -163,12 +170,14 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 pb-24"
         >
           <motion.a
-            href="#contact"
+            href={whatsappURL}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="relative z-20 group px-8 py-4 rounded-full bg-gradient-brand text-white font-normal flex items-center gap-2 transition-all hover:shadow-xl hover:shadow-brand-purple/30"
           >
-            Book Free Consultation
+            Start WhatsApp Chat
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </motion.a>
 

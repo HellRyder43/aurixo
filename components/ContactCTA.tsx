@@ -1,30 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Mail, Calendar } from "lucide-react";
-import { useState } from "react";
+import { MessageCircle, ArrowRight } from "lucide-react";
 
 export default function ContactCTA() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
-    console.log("Form submitted:", formData);
-    alert("Thank you! I'll get back to you within 24 hours.");
-    setFormData({ name: "", email: "", company: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  // WhatsApp configuration
+  const whatsappNumber = "60102651179";
+  const defaultMessage = encodeURIComponent(
+    "Hi! I'm interested in discussing a project with Aurixo."
+  );
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
 
   return (
     <section
@@ -54,100 +39,75 @@ export default function ContactCTA() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Form */}
-          <motion.form
+          {/* WhatsApp CTA */}
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            onSubmit={handleSubmit}
             className="space-y-6"
           >
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
+            <div className="p-8 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-2xl shadow-sm dark:shadow-none">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-brand-indigo/20 to-brand-magenta/20 flex items-center justify-center">
+                  <MessageCircle className="w-10 h-10 text-brand-indigo" />
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-light text-center mb-4 text-charcoal dark:text-white">
+                Let's Chat on{" "}
+                <span className="text-gradient font-normal">WhatsApp</span>
+              </h3>
+
+              <p className="text-center text-slate-gray dark:text-slate-text mb-6 leading-relaxed">
+                Get instant responses to your questions. I'm available to
+                discuss your project, provide quotes, and answer any queries you
+                might have.
+              </p>
+
+              <motion.a
+                href={whatsappURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="block w-full px-8 py-4 rounded-full bg-gradient-brand text-white font-normal text-center transition-all hover:shadow-xl hover:shadow-brand-purple/30"
               >
-                Your Name *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
-                placeholder="John Doe"
-              />
+                <span className="flex items-center justify-center gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  Start WhatsApp Chat
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </motion.a>
+
+              <div className="mt-6 pt-6 border-t border-cool-gray dark:border-white/10">
+                <div className="flex items-center justify-center gap-2 text-sm text-slate-gray dark:text-slate-text">
+                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                  Usually responds within minutes
+                </div>
+              </div>
             </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
-              >
-                Email Address *
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
-                placeholder="john@company.com"
-              />
+            <div className="p-6 bg-gradient-to-br from-brand-indigo/10 to-brand-magenta/10 border border-brand-indigo/20 rounded-xl">
+              <h4 className="text-lg font-normal mb-2 text-charcoal dark:text-white">
+                Why WhatsApp?
+              </h4>
+              <ul className="space-y-2 text-sm text-slate-gray dark:text-slate-text">
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-indigo mt-1">✓</span>
+                  <span>Instant communication and quick responses</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-indigo mt-1">✓</span>
+                  <span>Share files, screenshots, and documents easily</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-brand-indigo mt-1">✓</span>
+                  <span>Voice messages for detailed explanations</span>
+                </li>
+              </ul>
             </div>
-
-            <div>
-              <label
-                htmlFor="company"
-                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
-              >
-                Company Name
-              </label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all"
-                placeholder="Your Company Ltd."
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-normal mb-2 text-slate-gray dark:text-slate-text"
-              >
-                Project Details *
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                value={formData.message}
-                onChange={handleChange}
-                rows={5}
-                className="w-full px-4 py-3 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-lg text-charcoal dark:text-white placeholder-slate-gray dark:placeholder-slate-text focus:border-brand-indigo focus:outline-none transition-all resize-none"
-                placeholder="Tell me about your project, goals, and timeline..."
-              />
-            </div>
-
-            <motion.button
-              type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full px-8 py-4 rounded-full bg-gradient-brand text-white font-normal flex items-center justify-center gap-2 transition-all hover:shadow-xl hover:shadow-brand-purple/30"
-            >
-              Send Message
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
-          </motion.form>
+          </motion.div>
 
           {/* Contact Info */}
           <motion.div
@@ -160,39 +120,45 @@ export default function ContactCTA() {
             {/* Quick Actions */}
             <div className="space-y-4">
               <h3 className="text-2xl font-light mb-6 text-charcoal dark:text-white">
-                Prefer a Direct Approach?
+                Available on WhatsApp
               </h3>
 
               <motion.a
-                href="mailto:contact@aurixo.com"
-                whileHover={{ x: 5 }}
-                className="flex items-center gap-4 p-4 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group shadow-sm dark:shadow-none"
-              >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-indigo/20 to-brand-magenta/20 flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-brand-indigo" />
-                </div>
-                <div>
-                  <div className="text-sm text-slate-gray dark:text-slate-text">Email me</div>
-                  <div className="text-charcoal dark:text-white font-normal group-hover:text-brand-indigo transition-colors">
-                    contact@aurixo.com
-                  </div>
-                </div>
-              </motion.a>
-
-              <motion.a
-                href="https://cal.com/aurixo"
+                href={whatsappURL}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 p-4 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group shadow-sm dark:shadow-none"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-indigo/20 to-brand-magenta/20 flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-brand-indigo" />
+                  <MessageCircle className="w-6 h-6 text-brand-indigo" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-gray dark:text-slate-text">Schedule a call</div>
+                  <div className="text-sm text-slate-gray dark:text-slate-text">
+                    Message me
+                  </div>
                   <div className="text-charcoal dark:text-white font-normal group-hover:text-brand-indigo transition-colors">
-                    Book a meeting
+                    WhatsApp Chat
+                  </div>
+                </div>
+              </motion.a>
+
+              <motion.a
+                href={whatsappURL}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 5 }}
+                className="flex items-center gap-4 p-4 bg-white dark:bg-carbon border border-cool-gray dark:border-white/10 rounded-xl hover:border-brand-indigo/50 transition-all group shadow-sm dark:shadow-none"
+              >
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-brand-indigo/20 to-brand-magenta/20 flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-brand-indigo" />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-gray dark:text-slate-text">
+                    Schedule a call
+                  </div>
+                  <div className="text-charcoal dark:text-white font-normal group-hover:text-brand-indigo transition-colors">
+                    Book via WhatsApp
                   </div>
                 </div>
               </motion.a>

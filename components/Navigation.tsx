@@ -9,6 +9,13 @@ import ThemeToggle from "./theme-toggle";
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
 
+  // WhatsApp configuration
+  const whatsappNumber = "60102651179";
+  const defaultMessage = encodeURIComponent(
+    "Hi! I'm interested in discussing a project with Aurixo."
+  );
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${defaultMessage}`;
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -50,12 +57,14 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <motion.a
-            href="#contact"
+            href={whatsappURL}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-2.5 rounded-full bg-gradient-brand text-white font-normal text-sm transition-all hover:shadow-lg hover:shadow-brand-purple/25"
           >
-            Book Consultation
+            Chat on WhatsApp
           </motion.a>
         </div>
       </div>

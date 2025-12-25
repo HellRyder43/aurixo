@@ -7,10 +7,10 @@ import { useState } from "react";
 export default function ContactFab() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Replace with actual WhatsApp number (format: 60123456789 for Malaysia)
+  // WhatsApp configuration
   const whatsappNumber = "60102651179";
   const predefinedMessage = encodeURIComponent(
-    "Hi Aurixo! I'm interested in discussing a project with you. Could we schedule a consultation?"
+    "Hi! I'm interested in discussing a project with Aurixo."
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${predefinedMessage}`;
 
